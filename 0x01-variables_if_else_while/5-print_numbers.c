@@ -9,18 +9,10 @@
 */
 int main(void)
 {
-	char c = '0';
+	int n;
 
-	while (c <= '9')
-	{
-		char c = '0';
+	for (n = 0; n < 10; n++)
+		printf("%d, n);
+	Return (0);
+}
 
-		while (c <= '9')
-		{
-			putchar(c);
-			c++;
-		}
-
-		putchar('\n');
-		return (0);
-	}
