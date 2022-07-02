@@ -1,15 +1,15 @@
 #include <stdio.h>
 /**
 *main-main block prints alphabet
-*Description:followed by a new line
+*followed by a new line
 *except q and e.
-*Return :Always 0
+*Return :Always 0 (success)
 */
 int main(void)
 {
-	char ch = ' a ';
+	char c = ' a ';
 
-	while (ch <= 'z')
+	while (c <= 'z')
 	{
 		if (c != 'e' && c != 'q')
 		{
