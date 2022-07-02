@@ -10,15 +10,15 @@
 int main(void)
 {
 	int n;
-
-	while (n <= '9')
 	{
+		int n = '0';
 
-	printf("%d", n);
-	n++
-	}
+		while (n <= '9')
+		{
+			printf("%d, n");
+			n++;
+		}
 
-        printf("\n");     
-	Return(0);
+		 printf("\n");
+		return (0);
 }
-
