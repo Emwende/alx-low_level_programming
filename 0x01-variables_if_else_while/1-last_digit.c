@@ -1,6 +1,6 @@
 #include <time.h>
 #include <stdlib.h>
-#includei <stdio.h>
+#include <stdio.h>
 /**
  * main - Assign a random number to the variable n each time
  *it is executed.
@@ -25,5 +25,3 @@ int main(void)
 
 	return (0);
 }
-
-
