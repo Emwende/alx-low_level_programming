@@ -1,8 +1,9 @@
-#includei <stdio.h>
 #include <time.h>
 #include <stdlib.h>
+#includei <stdio.h>
 /**
- * main - prints all single digit numbers of base 10 starting from 0.
+ * main - Assign a random number to the variable n each time
+ *it is executed.
  * Description: Get a random number and check its last digit, compare it with 5
  * Return: Always 0 (success)
  */
@@ -20,7 +21,7 @@ int main(void)
 	else if (last == 0)
 		printf("Last digit of %d is %d and is 0\n", n, last);
 	else if (last < 6)
-		printf("Last digit of %d is %d and is less than 6 and not 0\n", n, last);
+		printf("Last digit of %i is %i and is less than 6 and not 0\n", n, last);
 
 	return (0);
 }
