@@ -33,7 +33,7 @@ int main(void)
 					if (!(f + e == 18 && c + d == 17 && d == 9))
 					{
 						putchar(',');
-						putchar('');
+						putchar(' ');
 					}
 				}
 				c++;
@@ -47,6 +47,3 @@ int main(void)
 	putchar('\n');
 	return (0);
 }
-
-										
-
