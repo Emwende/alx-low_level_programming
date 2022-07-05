@@ -1,6 +1,7 @@
 #include "main.h"
+
 /**
-* main-print the alphabet ten times
+* print_alphabet_x10 - print alphabet
 *in lowercase
 *followed by a new line
 *Return: Always 0 (succes
@@ -22,4 +23,5 @@ void print_alphabet_x10(void)
 	count++;
 	_putchar('\n');
 }
+
 }
