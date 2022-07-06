@@ -24,6 +24,6 @@ int main(void)
 			next = j + k;
 			j = k;
 			k = next;
-}
-return (0);
+	}	
+	return (0);
 }
