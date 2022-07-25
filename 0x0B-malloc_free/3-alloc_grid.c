@@ -1,3 +1,4 @@
+#include <stdlib.h>
 #include "main.h"
 
 /**
@@ -5,39 +6,41 @@
 *@width: width of an array
 *@height: height of an array
 *Return: a pointer to a allocated grid
+*or NULL (Error)
 */
 int **alloc_grid(int width, int height)
 {
-	int i, j, k, l;
-	int **a;
+	int **arr;
+	int i, j;
 
+	if (height <= 0 || width <= 0)
+		return (NULL);
 
-	if (width <= 0 || height <= 0)
+	arr = (int **) malloc(sizeof(int *) * height);
+
+	if (arr == NULL)
 		return (NULL);
-	a = malloc(height * sizeof(int *));
-	if (a == NULL)
-	{
-		free(a);
-		return (NULL);
-	}
+
 	for (i = 0; i < height; i++)
 	{
-		a[i] = malloc(width * sizeof(int));
-		if (a[i] == NULL)
+		arr[i] = (int *) malloc(sizeof(int) * width);
+		if (arr[i] == NULL)
 		{
-			for (j = i; j >= 0; j--)
-			{
-				free(a[j]);
-			}
-			free(a);
+			free(arr);
+			for (j = 0; j <= i; j++)
+				free(arr[j]);
 			return (NULL);
 		}
 	}
-
-	for (k = 0; k < height; k++)
+	for (i = 0; i < height; i++)
 	{
-		for (k = 0; k < height; k++)
-			a[k][l] = 0;
+		for (j = 0; j < width; j++)
+		{
+			arr[i][j] = 0;
+		}
 	}
-	return (a);
+	return (arr);
 }
+
+
+
