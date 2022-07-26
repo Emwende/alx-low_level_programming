@@ -1,4 +1,5 @@
 #include "main.h"
+#include <stdlib.h>
 
 int word_len(char *str);
 int count_words(char *str);
@@ -14,6 +15,26 @@ char **strtow(char *str);
 int word_len(char *str)
 {
 	int index = 0, len = 0;
+
+	while (*(str + index) && *(str + index) != ' ')
+	{
+		len++;
+		index++;
+	}
+
+	return (len);
+
+}
+
+/**
+ * count_words - counts the number of words contained within a string
+ * @str: the string to be searched
+ *
+ *Return: number of words contained within str
+ */
+int count_words(char *str)
+{
+	int index = 0, words = 0, len = 0;
 
 	for (index = 0; *(str + index); index++)
 		len++;
@@ -31,11 +52,12 @@ int word_len(char *str)
 }
 
 /**
- * strtow - splits a string into words
- * @str: the string to be split
- *  Return: if str = NULL, str = "", or the function fails - NULL
- *   otherwise - a pointer to an array of strings (words)
- */
+*strtow - splits a string into words
+* @str: the string to be split
+*  Return: if str = NULL, str = "", or the function fails - NULL
+*  otherwise - a pointer to an array of strings (words)
+*
+*/
 char **strtow(char *str)
 {
 	char **strings;
